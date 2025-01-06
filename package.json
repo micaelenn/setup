@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "boiler": "/bin/index.js"
+    "boiler": "./index.js"
   },
   "type": "module",
   "scripts": {

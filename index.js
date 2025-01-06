@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
+// external modules
 import { program } from "commander";
-import chalk from "chalk";
 import inquirer from "inquirer";
-import ora from "ora";
+
+// internal modules
+import copyAndPastFolder from "./utils/actions.js";
 
 program.version("1.0.0").description("Boiler CLI");
 
@@ -13,25 +15,22 @@ program.action(() => {
       {
         type: 'list',
         name: 'type',
-        message: ' 📦 which boilerplate do you need?',
+        message: ' Which boilerplate do you need?',
         choices: [
           'Frontend', 
           'Backend', 
-          'Full Stack', 
+          'Fullstack', 
           'Chrome Extension',
           'Sanity Studio',
           'Widget',
-          'WordPress Theme',
-          'WordPress Plugin',
+          'WP Theme',
+          'WP Plugin',
         ],
       },
     ])
     .then((answers) => {
-      const spinner = ora(`Setting up ${answers.type} boilerplate...`).start();
-
-      setTimeout(() => {
-        spinner.succeed(chalk.green(" Done!"));
-      }, 5000);
+      const boilerplateType = answers.type.toLowerCase().replace(/\s+/g, '-')
+      copyAndPastFolder(boilerplateType)
     });
 });
 
