@@ -6,8 +6,10 @@ import inquirer from "inquirer";
 
 // internal modules
 import copyAndPastFolder from "./utils/actions.js";
+import { getFoldersName } from "./utils/helpers.js";
 
 program.version("1.0.0").description("Boiler CLI");
+const boilerplates = getFoldersName('starters')
 
 program.action(() => {
   inquirer
@@ -16,21 +18,12 @@ program.action(() => {
         type: 'list',
         name: 'type',
         message: ' Which boilerplate do you need?',
-        choices: [
-          'Frontend', 
-          'Backend', 
-          'Fullstack', 
-          'Chrome Extension',
-          'Sanity Studio',
-          'Widget',
-          'WP Theme',
-          'WP Plugin',
-        ],
+        loop: false,
+        choices: boilerplates 
       },
     ])
-    .then((answers) => {
-      const boilerplateType = answers.type.toLowerCase().replace(/\s+/g, '-')
-      copyAndPastFolder(boilerplateType)
+    .then((boilerplate) => {
+      copyAndPastFolder(boilerplate.type)
     });
 });
 

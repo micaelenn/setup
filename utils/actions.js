@@ -1,14 +1,14 @@
+// external modules
 import fs from 'fs'
 import path from 'path'
 import chalk from "chalk";
 import ora from "ora";
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
+
+// internal modules
+import { getDirectoryName } from "./helpers.js";
 
 export default function copyAndPastFolder(type) {
   const spinner = ora(`Setting up boilerplate...`).start();
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = dirname(__filename);
 
   function copy(source, destination) {
     if (!fs.existsSync(destination)) {
@@ -29,7 +29,7 @@ export default function copyAndPastFolder(type) {
     }
   }
 
-  const starterDirectory = `${__dirname}/starters/`;
+  const starterDirectory = getDirectoryName('starters');
   const currentDirectory = process.cwd();
   const sourceFolder = path.join(starterDirectory, type);
   const destinationFolder = path.join(currentDirectory, '');
