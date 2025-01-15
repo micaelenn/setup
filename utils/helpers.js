@@ -20,3 +20,12 @@ export const getDirectoryName = (directoryPath) => {
   const __dirname = dirname(__filename);
   return`${__dirname}/${directoryPath}`;
 }
+
+/**
+ * Get directory lowecase name and format into camel case
+ * Ex: front-end -> Front End
+ *
+ */
+export const formatBoilerplateName = (type) => {
+  return type.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}

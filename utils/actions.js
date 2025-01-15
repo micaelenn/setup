@@ -5,10 +5,11 @@ import chalk from "chalk";
 import ora from "ora";
 
 // internal modules
-import { getDirectoryName } from "./helpers.js";
+import { getDirectoryName,formatBoilerplateName } from "./helpers.js";
 
 export default function copyAndPastFolder(type) {
-  const spinner = ora(`Setting up boilerplate...`).start();
+  const boilerplateName = formatBoilerplateName(type)
+  const spinner = ora(`Setting up boilerplate for ${boilerplateName} project...`).start();
 
   function copy(source, destination) {
     if (!fs.existsSync(destination)) {

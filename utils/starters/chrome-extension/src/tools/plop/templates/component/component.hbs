@@ -1,0 +1,17 @@
+// external modules
+import { FC } from 'react'
+
+// internal modules
+import { Component } from './{{ pascalCase name }}.styles'
+
+interface {{ pascalCase name }}Props {
+	className?: string;
+}
+
+const {{ pascalCase name }}: FC<{{ pascalCase name }}Props> = ({ className }) => {
+	return (
+		<Component className={`${className}`}></Component>
+	);
+};
+
+export default {{ pascalCase name }}
