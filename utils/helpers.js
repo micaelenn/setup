@@ -27,5 +27,5 @@ export const getDirectoryName = (directoryPath) => {
  *
  */
 export const formatBoilerplateName = (type) => {
-  return type.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  return type.split('-').map(word => word.charAt(0) + word.slice(1)).join(' ');
 }

@@ -1,0 +1,23 @@
+// external modules
+import { Request, Response, Router } from "express";
+
+// internal modules
+import { {{ lowerCase name }}Service } from "./{{ lowerCase name }}.service";
+import { setEndpoint } from '@/config/application'
+import { tryCatch } from '@/utils/helpers/tryCatch'
+
+export const {{ lowerCase name }} = Router();
+
+// POST
+{{ lowerCase name }}.post(setEndpoint('{{ lowerCase name }}'), tryCatch(
+  async (req: Request, res: Response) => {
+    res.status(200).send({});
+  })
+)
+
+// GET
+{{ lowerCase name }}.get(setEndpoint('{{ lowerCase name }}'), tryCatch(
+  async (req: Request, res: Response) => {
+    res.status(200).send({});
+  })
+);
