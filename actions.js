@@ -9,7 +9,7 @@ import { getDirectoryName,formatBoilerplateName } from "./helpers.js";
 
 export default function copyAndPastFolder(type) {
   const boilerplateName = formatBoilerplateName(type)
-  const spinner = ora(`Setting up boilerplate for ${boilerplateName} project...`).start();
+  const spinner = ora(`Setting up structure for ${boilerplateName} project...`).start();
 
   function copy(source, destination) {
     if (!fs.existsSync(destination)) {

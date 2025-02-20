@@ -17,7 +17,7 @@ program.action(() => {
       {
         type: 'list',
         name: 'type',
-        message: ' Which boilerplate do you need?',
+        message: ' which project structure do you need?',
         loop: false,
         choices: boilerplates 
       },
