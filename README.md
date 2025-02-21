@@ -24,6 +24,12 @@ Install dependencies
 npm install
 ```
 
+Link the project globally
+
+```
+npm link 
+```
+
 ## Usage
 
 This project includes a CLI to simplify the initial setup of web application development. Outside the previously cloned project root, create a new folder:
