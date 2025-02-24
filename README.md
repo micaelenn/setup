@@ -1,6 +1,6 @@
 # :package: boilerplates
 
-This repository provides a foundational structure for personal use, designed to streamline the development of web applications, including websites, apis, and widgets.
+This repository provides a foundational structure for personal use, designed to streamline the initial setup of web applications, including websites, apis, and widgets.
 
 ## Table of contents
 - [Setup](#setup)
@@ -36,6 +36,10 @@ This project includes a CLI to simplify the initial setup of web application dev
 
 ```
 mkdir new-project
+```
+
+```
+cd new-project
 ```
 
 To set the initial project structure, run the following command:
