@@ -1,4 +1,4 @@
-# :package: boilerplates
+# :package: setup
 
 This repository provides a foundational structure for personal use, designed to streamline the initial setup of web applications, including websites, apis, and widgets.
 
