@@ -1,10 +1,10 @@
 {
-  "name": "boiler",
+  "name": "setup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "boiler": "./index.js"
+    "setup": "./index.js"
   },
   "type": "module",
   "scripts": {
@@ -20,6 +20,6 @@
     "chalk": "^5.4.1",
     "commander": "^13.0.0",
     "inquirer": "^12.3.0",
-    "styled-components": "^6.1.14"
+    "ora": "^8.2.0"
   }
 }

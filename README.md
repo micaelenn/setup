@@ -3,19 +3,19 @@
 This repository provides a foundational structure for personal use, designed to streamline the initial setup of web applications, including websites, apis, and widgets.
 
 ## Table of contents
-- [Setup](#setup)
+- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Boilerplates](#boilerplates)
 
-## Setup
+## Getting Started
 
 Clone the repository
 ```
-git clone https://github.com/micaelenn/boilerplates.git
+git clone https://github.com/micaelenn/setup.git
 ```
 
 ```
-cd boilerplates
+cd setup
 ```
 
 Install dependencies
@@ -45,7 +45,7 @@ cd new-project
 To set the initial project structure, run the following command:
 
 ```
-boiler 
+setup
 ```
 
 The options will show on the terminal, choose the application to be built:
