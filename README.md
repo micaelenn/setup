@@ -3,9 +3,13 @@
 This repository provides a foundational structure for personal use, designed to streamline the initial setup of web applications, including websites, apis, and widgets.
 
 ## Table of contents
+- [Requirements](#requirements)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Boilerplates](#boilerplates)
+
+## Requirements
+- [Node.js](https://nodejs.org/en) - 22+
 
 ## Getting Started
 
