@@ -1,0 +1,20 @@
+export const dynamic = 'force-dynamic'
+
+// internal dependencies
+import {{ pascalCase name }}Layout from "@/layouts/{{ pascalCase name }}/{{ pascalCase name }}";
+import { getSeo } from "@/lib/sanity/{{ kebabCase name }}";
+
+export async function generateMetadata() {
+  const seo = await getSeo()
+
+  return {
+    title: seo.{{ camelCase name }}.title,
+    description: seo.{{ camelCase name }}.description
+  }
+}
+
+export default async function {{ pascalCase name }}() {
+  return (
+    <{{pascalCase name}}Layout />
+  )
+}
