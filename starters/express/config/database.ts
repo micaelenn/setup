@@ -2,18 +2,19 @@
 import dotenv from "dotenv"
 import { Sequelize } from "sequelize-typescript"
 
+// internal modules
+import { App } from "@/config/application"
+
 // models
 import { Heartbeat } from '@/app/heartbeat/heartbeat.model'
 
 dotenv.config({ path: ".env" });
 
-const database =  `${process.env.DB_NAME}`
-const username = `${process.env.DB_USER}`
-const password = `${process.env.DB_PASSWORD}`
-const host = `${process.env.DB_HOST}`
-
-export const sequelize = new Sequelize(database, username, password, {
-  host: host,
+export const sequelize = new Sequelize(
+  App.databaseName!, 
+  App.databaseUser!, 
+  App.databasePassword, {
+  host: App.databaseHost,
   dialect: 'mysql',
   models: [Heartbeat],
   logging: false
